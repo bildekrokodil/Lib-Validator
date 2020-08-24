@@ -1,0 +1,17 @@
+{
+    "name": "cloudonaut/validator",
+    "description": "A simple reusable validator class",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Roel Van der planken",
+            "email": "roel@drinksomecoffee.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {"Cloudonaut\\Lib\\": "src/"}
+    },
+    "require": {}
+}
