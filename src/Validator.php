@@ -237,7 +237,7 @@ class Validator
     public function addViolation($description, $id = '')
     {
         $this->isViolated = true;
-        $this->$violationList[] = $description;
+        $this->violationList[] = $description;
         if ($id != '') {
             $this->violationListByID[$id][] = $description;
         }
