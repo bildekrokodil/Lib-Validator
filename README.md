@@ -68,6 +68,30 @@ output
 ```
 Value must be 7
 ```
+
+### Example combining rules
+You can check the same or other values as many as you want. For example. A e-mail adres must be filled in and a name. But a name is text only.
+
+```php
+$name = "R2D2"; // wrong name
+$mail="test.example.com"; //wrong mail
+
+$validator->isNotEmpty($name, "Name can't be empty");
+$validator->isNotEmpty($mail, "Mail can't be empty");
+$validator->isTextOnly($name, "Name can't have numbers");
+$validator->isEmail($name, "Mails is not in the correct format");
+
+if ($validator->hasViolations())
+{
+    implode(", " $validator->getViolations());
+}
+```
+output
+```
+Name can't have numbers, Mails is not in the correct format
+```
+
+
 ## Basic functions
 
 ### addViolation($msg='')
